@@ -1,10 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 
+</head>
+<body class="">
+    <header>
+        <h1 class="text-center bg-warning p-3">DVD BANK</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div id="left-container" class="col bg-primary">
+                <h1 class="text-center mt-3">Customers</h1>
+                <div class="mt-5 ms-4 me-2">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control text-center" placeholder="Customer ID" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control text-center" placeholder="Customer Name" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control text-center" placeholder="Customer Address" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control text-center" placeholder="Customer Contact No" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="d-flex justify-content-center p-2">
+                        <button type="submit" class="btn bg-warning">SAVE</button>
+                    </div>
+                </div>
+            </div>
+            <div id="right-container" class="bg-secondary col">
+                <div class="p-3">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>C001</td>
+                                <td>Ruwan</td>
+                                <td>Matara</td>
+                                <td>071-1111111</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
