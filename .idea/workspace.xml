@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6cecca5a-c4b1-46ef-af58-8222c549bcd5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/lk/dvd/g1/api/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/lk/dvd/g1/api/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/lk/dvd/g1/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/lk/dvd/g1/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692249682527</updated>
       <workItem from="1692249683628" duration="12373000" />
-      <workItem from="1692269801739" duration="6995000" />
+      <workItem from="1692269801739" duration="15089000" />
     </task>
     <servers />
   </component>

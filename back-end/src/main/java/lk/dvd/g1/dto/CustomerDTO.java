@@ -13,9 +13,9 @@ public class CustomerDTO {
     private String address;
     private String contactNumber;
 
-//    public CustomerDTO(String name, String address, String contactNumber) {
-//        this.name = name;
-//        this.address = address;
-//        this.contactNumber = contactNumber;
-//    }
+    public CustomerDTO(String name, String address, String contactNumber) {
+        this.name = name;
+        this.address = address;
+        this.contactNumber = contactNumber;
+    }
 }

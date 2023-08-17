@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 <!--    <link rel="stylesheet" href="css/reset.css">-->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -21,29 +22,39 @@
     </header>
     <main>
         <div class="row">
-            <div id="left-container" class="col bg-primary">
+            <div id="left-container" class="col border-end">
                 <h1 class="text-center mt-3">Customers</h1>
                 <div class="mt-5 ms-4 me-2">
-                    <div class="input-group mb-4">
-                        <input type="text" class="form-control text-center" placeholder="Customer ID" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="mb-3">
+                        <div class="text-center"><label for="txt-name" class="form-label">Customer Name</label></div>
+                        <input id="txt-name" type="text" class="form-control text-center" placeholder="Eg:Ruwan Sampath">
+                        <div class="text-center p-2 invalid-feedback">
+                            Name can't be empty
+                        </div>
                     </div>
-                    <div class="input-group mb-4">
-                        <input type="text" class="form-control text-center" placeholder="Customer Name" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="mb-3">
+                        <div class="text-center"><label for="txt-address" class="form-label">Customer Address</label></div>
+                        <input id="txt-address" type="text" class="form-control text-center" placeholder="Eg:Galle Road, Panadura">
+                        <div class="text-center p-2 invalid-feedback">
+                            Address can't be empty
+                        </div>
                     </div>
-                    <div class="input-group mb-4">
-                        <input type="text" class="form-control text-center" placeholder="Customer Address" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="mb-3">
+                        <div class="text-center"><label for="txt-contact" class="form-label">Customer Contact</label></div>
+                        <input id="txt-contact" type="text" class="form-control text-center" placeholder="Eg:011-1111111">
+                        <div class="text-center p-2 invalid-feedback">
+                            Contact can't be empty
+                        </div>
                     </div>
-                    <div class="input-group mb-4">
-                        <input type="text" class="form-control text-center" placeholder="Customer Contact No" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
+
                     <div class="d-flex justify-content-center p-2">
-                        <button type="submit" class="btn bg-warning">SAVE</button>
+                        <button id="btn-save" type="submit" class="btn bg-warning">SAVE</button>
                     </div>
                 </div>
             </div>
-            <div id="right-container" class="bg-secondary col">
+            <div id="right-container" class="col">
                 <div class="p-3">
-                    <table class="table table-bordered table-hover">
+                    <table id="table-customer" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
