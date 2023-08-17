@@ -45,5 +45,22 @@ public class CustomerController {
         }
     }
 
-   
+    @PostMapping
+    public ResponseEntity<?> saveCustomer(@RequestBody CustomerDTO customer) {
+        try(Connection connection = pool.getConnection()){
+            PreparedStatement stm = connection.prepareStatement("INSERT INTO customer (name, address, contact) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            stm.setString(1, customer.getName());
+            stm.setString(2, customer.getAddress());
+            stm.setString(3, customer.getContactNumber());
+            stm.executeUpdate();
+            ResultSet generatedKeys = stm.getGeneratedKeys();
+            generatedKeys.next();
+            int id = generatedKeys.getInt(1);
+            customer.setId(id);
+            return new ResponseEntity<>(customer, HttpStatus.CREATED);
+        }catch (SQLException e){
+            e.printStackTrace();
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
