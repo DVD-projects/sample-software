@@ -78,4 +78,24 @@ public class CustomerController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<?> updateCustomer(@PathVariable("id") Integer customerId,@RequestBody CustomerDTO customer) {
+        try(Connection connection = pool.getConnection()){
+            PreparedStatement stm = connection.prepareStatement("UPDATE customer SET name=?, address=?, contact=? WHERE id=?");
+            stm.setString(1, customer.getName());
+            stm.setString(2, customer.getAddress());
+            stm.setString(3, customer.getContactNumber());
+            stm.setInt(4,customerId);
+            int affectedRows = stm.executeUpdate();
+            if (affectedRows==1){
+                return new ResponseEntity<>(HttpStatus.OK);
+            }else {
+                return new ResponseEntity<>("CustomerId Not Found", HttpStatus.NOT_FOUND);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
